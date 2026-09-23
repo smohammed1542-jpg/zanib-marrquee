@@ -1,0 +1,81 @@
+.hr-page .page-header {
+  margin-bottom: 20px;
+}
+
+.hr-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.hr-stats__card {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.hr-stats__card--accent {
+  border-color: #bfdbfe;
+  background: #eff6ff;
+}
+
+.hr-stats__label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.hr-stats__value {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.hr-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.hr-toolbar__select {
+  min-width: 150px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-main);
+  font-size: 14px;
+}
+
+.hr-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.hr-badge--pending { background: #fef3c7; color: #92400e; }
+.hr-badge--paid { background: #dcfce7; color: #166534; }
+.hr-badge--draft { background: #e2e8f0; color: #475569; }
+.hr-badge--deducted { background: #dbeafe; color: #1e40af; }
+
+.hr-modal-overlay {
+  z-index: 10050;
+}
+
+.hr-modal {
+  width: 100%;
+  max-width: 520px;
+  max-height: min(90vh, 760px);
+  overflow-y: auto;
+  padding: 22px 24px;
+}

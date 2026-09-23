@@ -1,0 +1,406 @@
+.stay-guest-roster {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stay-guest-roster .card-surface {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  background: var(--surface);
+}
+
+.stay-guest-roster__heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.stay-guest-roster__heading-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.stay-guest-roster__heading-icon--primary {
+  background: var(--primary-light);
+  color: var(--primary);
+  border-color: transparent;
+}
+
+.stay-guest-roster__title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--secondary);
+}
+
+.stay-guest-roster__subtitle {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.stay-guest-roster__profile-card {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.stay-guest-roster__profile-name {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.stay-guest-roster__profile-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 4px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.stay-guest-roster__profile-link {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+.stay-guest-roster__profile-card--primary {
+  border-color: rgba(91, 213, 30, 0.35);
+  background: linear-gradient(180deg, var(--primary-light) 0%, var(--surface) 100%);
+}
+
+.stay-guest-roster__profile-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--primary);
+  background: #fff;
+  border: 1px solid rgba(91, 213, 30, 0.35);
+  padding: 3px 8px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+.stay-guest-roster__total-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px dashed var(--border);
+  background: var(--background);
+  font-size: 13px;
+  color: var(--text-main);
+}
+
+.stay-guest-roster__total-bar-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stay-guest-roster__total-bar-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.stay-guest-roster__companion-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stay-guest-roster__remove-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.stay-guest-roster__add-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px dashed var(--primary);
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.stay-guest-roster__add-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.stay-guest-roster__limit-hint {
+  margin: -8px 0 0;
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.stay-guest-roster__companions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.stay-guest-roster__companion-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.stay-guest-roster__companion-badge {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.stay-guest-roster__scan-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-main);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.stay-guest-roster__scan-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.stay-guest-roster__detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stay-guest-roster__detail-item {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 16px;
+  background: var(--surface);
+}
+
+.stay-guest-roster__detail-item--primary {
+  border-color: rgba(91, 213, 30, 0.35);
+  background: linear-gradient(180deg, var(--primary-light) 0%, var(--surface) 100%);
+}
+
+.stay-guest-roster__detail-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.stay-guest-roster__detail-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.stay-guest-roster__detail-badge {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+  white-space: nowrap;
+}
+
+.stay-guest-roster__detail-badge--guest {
+  background: var(--background);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+.stay-guest-roster__detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 16px;
+  font-size: 13px;
+}
+
+.stay-guest-roster__detail-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.stay-guest-roster__detail-value {
+  font-weight: 700;
+  color: var(--text-main);
+  word-break: break-word;
+}
+
+.stay-guest-roster__detail-grid--single {
+  grid-template-columns: 1fr;
+}
+
+.stay-guest-roster__detail-companions {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(91, 213, 30, 0.35);
+}
+
+.stay-guest-roster__detail-companions-title {
+  margin: 0 0 10px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.stay-guest-roster__detail-companion {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid var(--border);
+}
+
+.stay-guest-roster__detail-companion + .stay-guest-roster__detail-companion {
+  margin-top: 8px;
+}
+
+.stay-guest-roster__detail-companion-main {
+  min-width: 0;
+  flex: 1;
+}
+
+.stay-guest-roster__detail-companion-name {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.stay-guest-roster__detail-companion-tag {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  background: var(--background);
+  border: 1px solid var(--border);
+  padding: 2px 6px;
+  border-radius: 999px;
+}
+
+.stay-guest-roster__detail-companion-meta {
+  font-size: 12px;
+  color: var(--text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+
+.stay-guest-roster__addons {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.stay-guest-roster__addons-title {
+  margin: 0 0 6px;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.stay-guest-roster__addons-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+}
+
+.stay-guest-roster__addons-item {
+  font-size: 12px;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stay-guest-roster__addons-item strong {
+  color: var(--text-main);
+  font-weight: 800;
+}
+
+@media (max-width: 640px) {
+  .stay-guest-roster__detail-grid {
+    grid-template-columns: 1fr;
+  }
+}

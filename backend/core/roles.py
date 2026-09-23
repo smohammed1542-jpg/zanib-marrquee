@@ -1,0 +1,22 @@
+"""Canonical user roles for Marriage Hall and Guest House."""
+
+ROLE_ADMIN = 'ADMIN'
+ROLE_MANAGER = 'MANAGER'
+ROLE_HR = 'HR'
+
+ROLE_CHOICES = (
+    (ROLE_ADMIN, 'Admin'),
+    (ROLE_MANAGER, 'Manage'),
+    (ROLE_HR, 'HR'),
+)
+
+ASSIGNABLE_ROLES = (ROLE_ADMIN, ROLE_MANAGER, ROLE_HR)
+MANAGE_ROLES = (ROLE_ADMIN, ROLE_MANAGER)
+STAFF_READ_ROLES = (ROLE_ADMIN, ROLE_HR)
+STAFF_WRITE_ROLES = (ROLE_ADMIN, ROLE_HR)
+OPERATE_ROLES = (ROLE_ADMIN, ROLE_MANAGER)
+ALL_ROLES = ASSIGNABLE_ROLES
+
+
+def user_role(user):
+    return getattr(user, 'role', None) or ROLE_HR
